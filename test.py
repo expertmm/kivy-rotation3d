@@ -4,7 +4,7 @@ from kivy.uix.widget import Widget
 from kivy.graphics import *
 
 class Renderer(Widget):
-    
+
     def __init__(self, *args, **kw):
         super(Renderer, self).__init__(*args, **kw)
         with self.canvas:
@@ -14,12 +14,12 @@ class Renderer(Widget):
             Translate(400, -300, 0)
             Rectangle(pos=(0, 0), size=(300, 300))
             PopMatrix()
-            
+
             PushMatrix()
             Color(0.5, 1, 0.5, 1)
             Rectangle(pos=(100, 100), size=(200, 200))
             PopMatrix()
-            
+
             PushMatrix()
             Color(0.0, 0.5, 0.5, 1)
             Translate(300, 300, 0)
@@ -28,7 +28,7 @@ class Renderer(Widget):
             PopMatrix()
 
 class TestApp(App):
-    
+
     def build(self):
         return Renderer()
 

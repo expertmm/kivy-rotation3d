@@ -2,10 +2,10 @@ from kivy.graphics import *
 from kivy.graphics.transformation import Matrix
 
 class SingleRotate(object):
-    
+
     def __init__(self, angle, axis, render_context):
         # It shold be way to get current context
-        # but in simple case we may just pass it to constructor 
+        # but in simple case we may just pass it to constructor
        self.context = render_context
        self._axis = axis
        self._angle = angle
@@ -16,11 +16,11 @@ class SingleRotate(object):
 
     def radians(self, degrees):
        """ Calculate radians from angle here """
-       return degrees * (3.14159265 / 180.) 
+       return degrees * (3.14159265 / 180.)
 
     @property
     def angle(self):
-       return self._angle 
+       return self._angle
 
     @angle.setter
     def angle(self, v):
